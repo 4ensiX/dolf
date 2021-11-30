@@ -5,7 +5,7 @@ listing docker image layer files
 ## dependancy
 
 - docker
-- - docker command with sudo?
+  - docker command with sudo?
 
 ## how to use
 ```
