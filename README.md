@@ -1,4 +1,4 @@
-# dolfl
+# dolf
 [![pipeline status](https://gitlab.apps.cs.ie.niigata-u.ac.jp/t-suzuki/dolfl/badges/master/pipeline.svg)](https://gitlab.apps.cs.ie.niigata-u.ac.jp/t-suzuki/dolfl/commits/master)
 
 listing docker image layer files
