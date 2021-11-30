@@ -1,0 +1,4 @@
+/var/cache/apt/archives/lock
+/var/lib/apt/extended_states
+/var/lib/dpkg/lock
+/var/lib/dpkg/lock-frontend

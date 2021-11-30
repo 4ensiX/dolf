@@ -1,0 +1,9 @@
+/var/lib/apt/lists/.wh.auxfiles
+/var/lib/apt/lists/.wh.deb.debian.org_debian_dists_buster-updates_InRelease
+/var/lib/apt/lists/.wh.deb.debian.org_debian_dists_buster-updates_main_binary-amd64_Packages.lz4
+/var/lib/apt/lists/.wh.deb.debian.org_debian_dists_buster_InRelease
+/var/lib/apt/lists/.wh.deb.debian.org_debian_dists_buster_main_binary-amd64_Packages.lz4
+/var/lib/apt/lists/.wh.lock
+/var/lib/apt/lists/.wh.partial
+/var/lib/apt/lists/.wh.security.debian.org_debian-security_dists_buster_updates_InRelease
+/var/lib/apt/lists/.wh.security.debian.org_debian-security_dists_buster_updates_main_binary-amd64_Packages.lz4
