@@ -2,7 +2,12 @@
 
 listing docker image layer files
 
-# how to use
+## dependancy
+
+- docker
+- - docker command with sudo?
+
+## how to use
 ```
 $ dolf alpine
 $ ls temp/
