@@ -4,8 +4,10 @@ import (
 	"fmt"
 	"io"
 	"os"
+        "strconv"
 
-	"dolf/util"
+//	"dolf/util"
+	"github.com/4ensiX/dolf/util"
 
 	"github.com/docker/docker/client"
 	"golang.org/x/net/context"
@@ -35,10 +37,10 @@ func main() {
 
     if len(os.Args) < 2 {
         fmt.Println("how to use: dolf [image name]")
-        return 
+        return
     }else if len(os.Args) > 2 {
         fmt.Println("invalid args")
-        return 
+        return
     }
     var id string = os.Args[1]
 
@@ -49,18 +51,25 @@ func main() {
 	}
 	defer reader.Close()
 
-	layer, _ := util.DLtar(reader)
+    layer, layers_sum := util.DLtar(reader)
 
     dir := "temp"
     err = os.Mkdir(dir, 0755)
 
     if err != nil {
         fmt.Println(err)
-        return
+        //return
     }
 
     for i, _ := range layer {
-        wf, err := os.Create("temp/" + layer[i].Layer + ".txt")
+        var wf *os.File
+        var err error
+        for j, _ :=  range layers_sum.Manifest {
+            if layer[i].Layer == layers_sum.Manifest[j] {
+                wf, err = os.Create("temp/" + layers_sum.Img_id[j] + ".txt")
+                break
+            }
+        }
         if err != nil {
             fmt.Println(err)
             return
@@ -69,5 +78,9 @@ func main() {
         for _, temp := range layer[i].LayerFiles {
             wf.WriteString(temp + "\n")
         }
+    }
+    lay, err := os.Create("temp/layers.txt")
+    for i, _ := range layers_sum.Manifest {
+        lay.WriteString(strconv.Itoa(i+1) + " " + layers_sum.Manifest[i] + " " + layers_sum.Img_id[i] + "\n")
     }
 }

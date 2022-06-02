@@ -1,13 +1,9 @@
-# dolf
+# dolfl
+[![pipeline status](https://gitlab.apps.cs.ie.niigata-u.ac.jp/t-suzuki/dolfl/badges/master/pipeline.svg)](https://gitlab.apps.cs.ie.niigata-u.ac.jp/t-suzuki/dolfl/commits/master)
 
 listing docker image layer files
 
-## dependancy
-
-- docker
-  - docker command with sudo?
-
-## how to use
+# how to use
 ```
 $ dolf alpine
 $ ls temp/
